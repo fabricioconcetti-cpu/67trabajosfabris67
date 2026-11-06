@@ -1,5 +1,6 @@
 body{
-background-color: rgb(148, 0, 116);
-color: rgb(255, 255, 255);
-text-align: center
+background: url(pou.webp) no-repeat center center/cover;
+height: 100;
+text-align: center;
+color: white
 }

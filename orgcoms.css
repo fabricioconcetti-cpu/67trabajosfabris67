@@ -1,9 +1,6 @@
 body{
-background-color: black;
-color: aliceblue;
-text-align: center
-}
-.caballerito {
- width: 1px;     
-  height: 1px;    
+background: url(fotoo.webp) no-repeat center center/cover;
+height: 100;
+text-align: center;
+color: white
 }

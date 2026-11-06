@@ -1,10 +1,6 @@
 body{
-background-color: rgb(7, 97, 3);
-color: rgb(255, 255, 255);
-text-align: center
-}
-.tasumaki{
-text-align: center
-width 1px;     
-height: 1px; 
+background: url(tasumaki.webp) no-repeat center center/cover;
+height: 100;
+text-align: center;
+color: rgb(87, 6, 6)
 }
