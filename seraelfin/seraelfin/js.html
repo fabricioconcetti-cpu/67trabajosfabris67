@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="js.css">
+    <link rel="stylesheet" href="js.js">
+    <title>js</title>
+</head>
+<body>
+    <h1>javascript</h1> 
+    <p>hola usuario hoy te voy a hacer 5 preguntas de javascript </p>
+ <p>1. ¿javascript son los amigos que hicimos en el camino?</p>
+  <button onclick="responder(this, false)">no </button>
+  <button onclick="responder(this, true)">si</button>
+  <span></span>
+
+  <p>2. ¿puedo respirar mientras trabajo con javascript ?</p>
+  <button onclick="responder(this, true)">si</button>
+  <button onclick="responder(this, false)">no</button>
+  <span></span>
+
+  <p>3. ¿existe alguna persona en el planeta que sea experto en javascript ?</p>
+  <button onclick="responder(this, true)">supongo que si</button>
+  <button onclick="responder(this, false)">nadie lo entiende </button>
+  <span></span>
+
+  <p>4. ¿javascript es una conspiracion del area 51</p>
+  <button onclick="responder(this, true)">probablemente</button>
+  <button onclick="responder(this, false)">no se </button>
+  <span></span>
+
+  <p>5. ¿estas preguntas te parece que tienen algo que ver con javascipt?</p>
+  <button onclick="responder(this, false)">no</button>
+  <button onclick="responder(this, true)">si</button>
+  <span></span>
+<h1></h1>
+<button onclick="window.location.href='paginadinicio.html'">Ir a la página de inicio  de nuevo</button>
+<script>
+    function responder(boton, esCorrecto) {
+      const mensaje = boton.parentElement.querySelectorAll("span")[
+        Array.from(document.querySelectorAll("p")).indexOf(boton.previousElementSibling?.tagName === "P" ? boton.previousElementSibling : boton.previousElementSibling.previousElementSibling) - 1
+      ];
+      mensaje.textContent = esCorrecto ? " ¡Correcto!" : " Incorrecto"; 
+    }
+  </script>
+ <div class="azure">
+    <img src="azure.webp" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="matriz.css">
+    <link rel="stylesheet" href="matriz.js">
+    <title>matriz</title>
+</head>
+<body>
+    <h1>matriz </h1> 
+    <p>hola usuario hoy te voy a hacer 5 preguntas de matriz</p>
+  <p>1.si tiene 3 columnas y 3 filas cuantos numeros tiene? </p>
+  <button onclick="responder(this, false)">3</button>
+  <button onclick="responder(this, true)">9</button>
+  <span></span>
+
+<p>si tiene 5 columnas y 5 filas cuantos numeros tiene?</p>
+  <button onclick="responder(this, true)">25</button>
+  <button onclick="responder(this, false)">24</button>
+  <span></span>
+
+  <p>3.si tiene 2 columnas y 7 filas cuantos numeros tiene? </p>
+  <button onclick="responder(this, true)">14</button>
+  <button onclick="responder(this, false)">13</button>
+  <span></span>
+
+  <p>4. si tiene 2 columnas y 1 filas cuantos numeros tiene?</p>
+  <button onclick="responder(this, true)">2</button>
+  <button onclick="responder(this, false)">1000000</button>
+  <span></span>
+
+  <p>5. si tiene 10 columnas y 5 filas cuantos numeros tiene?</p>
+  <button onclick="responder(this, false)">1000</button>
+  <button onclick="responder(this, true)">50</button>
+  <span></span>
+<h1></h1>
+<button onclick="window.location.href='paginadinicio.html'">Ir a la página de inicio  de nuevo</button>
+
+<script>
+    function responder(boton, esCorrecto) {
+      const mensaje = boton.parentElement.querySelectorAll("span")[
+        Array.from(document.querySelectorAll("p")).indexOf(boton.previousElementSibling?.tagName === "P" ? boton.previousElementSibling : boton.previousElementSibling.previousElementSibling) - 1
+      ];
+      mensaje.textContent = esCorrecto ? " ¡Correcto!" : " Incorrecto";
+    }
+  </script>
+
+ <div class="lima">
+    <img src="lima.webp" alt="">
+    </div>
+</body>
+</html>
