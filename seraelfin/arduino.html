@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="arduino.css">
+    <link rel="stylesheet" href="arduino.js">
+    <title>arduino</title>
+</head>
+<body>
+    <h1>Arduino </h1> 
+    <p>hola usuario hoy te voy a hacer 5 preguntas de arduino<p>
+<p>1. ¿se puede crear un semaforo en arduino?</p>
+  <button onclick="responder(this, false)">falso</button>
+  <button onclick="responder(this, true)">Verdadero</button>
+  <span></span>
+
+  <p>2. ¿cual es la primera pieza que se debe agarrar?</p>
+  <button onclick="responder(this, true)">protoboar</button>
+  <button onclick="responder(this, false)">lampara</button>
+  <span></span>
+
+
+  <p>3. ¿se puede cambiar el color de la lampara ?</p>
+  <button onclick="responder(this, true)">Verdadero</button>
+  <button onclick="responder(this, false)">Falso</button>
+  <span></span>
+
+  <p>4. ¿existe el motor en arduino?</p>
+  <button onclick="responder(this, true)">Verdadero</button>
+  <button onclick="responder(this, false)">Falso</button>
+  <span></span>
+
+  <p>5. ¿se puede cambiar el color del cable?</p>
+  <button onclick="responder(this, false)">falso</button>
+  <button onclick="responder(this, true)">Verdadero</button>
+  <span></span>
+<h1></h1>
+<button onclick="window.location.href='paginadinicio.html'">Ir a la página de inicio  de nuevo</button>
+
+<script>
+    function responder(boton, esCorrecto) {
+      const mensaje = boton.parentElement.querySelectorAll("span")[
+        Array.from(document.querySelectorAll("p")).indexOf(boton.previousElementSibling?.tagName === "P" ? boton.previousElementSibling : boton.previousElementSibling.previousElementSibling) - 1
+      ];
+      mensaje.textContent = esCorrecto ? " ¡Correcto!" : " Incorrecto";
+    }
+  </script>
+
+</body>
+</html>
